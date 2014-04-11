@@ -8,14 +8,19 @@ namespace SnakeGame_Aldo
 {
     public class Snake
     {
-        public Rectangle[] snakeRec;
+        private Rectangle[] snakeRec;
         private SolidBrush brush;
         private int x, y, width, height;
+
+        public Rectangle [] SnakeRec
+        {
+            get { return snakeRec; }
+        }
 
         public Snake()
         {
             snakeRec = new Rectangle[3];
-            brush = new SolidBrush(Color.Red);
+            brush = new SolidBrush(Color.LimeGreen);
 
             x = 20;
             y = 0;
@@ -68,6 +73,18 @@ namespace SnakeGame_Aldo
                 drawSnake();
                 snakeRec[0].X -= 10;
             }
+
+              public void growSnake()
+            {
+                  List<Rectangle> rec = snakeRec.ToList();
+                  rec.Add(new Rectangle(snakeRec[snakeRec.Length - 1].X, snakeRec[snakeRec.Length - 1].Y, width, height));
+                  snakeRec = rec.ToArray();
+            }
+           
+
+            
+
+}
         }
-    }
+    
 

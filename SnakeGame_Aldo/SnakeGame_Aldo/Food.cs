@@ -17,7 +17,7 @@ namespace SnakeGame_Aldo
             x = randFood.Next(0, 29) * 10;
             y = randFood.Next(0, 29) * 10;
 
-            brush = new SolidBrush(Color.Black);
+            brush = new SolidBrush(Color.White);
 
             width = 10;
             height = 10;
@@ -33,6 +33,10 @@ namespace SnakeGame_Aldo
 
         public void drawFood(Graphics paper)
         {
+            foodRec.X = x;
+            foodRec.Y = y;
+
+            paper.FillRectangle(brush, foodRec);
 
         }
     }
