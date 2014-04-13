@@ -85,10 +85,10 @@
             // 
             this.copyrightLabel.BackColor = System.Drawing.Color.Black;
             this.copyrightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyrightLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.copyrightLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.copyrightLabel.Location = new System.Drawing.Point(144, 265);
             this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(134, 15);
+            this.copyrightLabel.Size = new System.Drawing.Size(134, 25);
             this.copyrightLabel.TabIndex = 2;
             this.copyrightLabel.Text = " © 2014 by Aldo Valdes";
             // 
@@ -96,9 +96,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(290, 312);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.spaceBarTxt);
