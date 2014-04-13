@@ -63,8 +63,10 @@ namespace SnakeGame_Aldo
                 left = false;
             }
 
+
             if (e.KeyData == Keys.Down && up == false)
             {
+                moveSound();
                 down = true;
                 up = false;
                 right = false;
@@ -72,6 +74,7 @@ namespace SnakeGame_Aldo
             }
             if (e.KeyData == Keys.Up && down == false)
             {
+                moveSound();
                 down = false;
                 up = true;
                 right = false;
@@ -79,6 +82,7 @@ namespace SnakeGame_Aldo
             }
             if (e.KeyData == Keys.Right && left == false)
             {
+                moveSound();
                 down = false;
                 up = false;
                 right = true;
@@ -86,6 +90,7 @@ namespace SnakeGame_Aldo
             }
             if (e.KeyData == Keys.Left && right == false)
             {
+                moveSound();
                 down = false;
                 up = false;
                 right = false;
@@ -108,6 +113,9 @@ namespace SnakeGame_Aldo
             {
                 if (snake.SnakeRec[i].IntersectsWith(food.foodRec))
                 {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    player.SoundLocation = (@"C:\\Users\Philosofo\Documents\GitHub\SnakeGame\Sounds\FoodPickup.wav");
+                    player.Play();
                     food.foodLocation(ranFood);
                     snake.growSnake();
                     score += 10;
@@ -141,11 +149,21 @@ namespace SnakeGame_Aldo
             }
         }
 
+        public void moveSound()
+        {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    player.SoundLocation = (@"C:\\Users\Philosofo\Documents\GitHub\SnakeGame\Sounds\Move1 Blip.wav");
+                    player.Play();
+        }
+
+
         public void restart()
         {
             //set score to zero.
             score = 0;
-
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = (@"C:\\Users\Philosofo\Documents\GitHub\SnakeGame\Sounds\Death.wav");
+            player.Play();
             this.Controls.Add(copyrightLabel);
             this.Controls.Add(spaceBarTxt);
             timer1.Enabled = false;

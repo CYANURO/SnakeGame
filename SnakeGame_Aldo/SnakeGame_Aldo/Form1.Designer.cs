@@ -69,6 +69,7 @@
             // 
             // spaceBarTxt
             // 
+            this.spaceBarTxt.BackColor = System.Drawing.SystemColors.Desktop;
             this.spaceBarTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spaceBarTxt.ForeColor = System.Drawing.SystemColors.Control;
             this.spaceBarTxt.Image = ((System.Drawing.Image)(resources.GetObject("spaceBarTxt.Image")));
@@ -82,10 +83,10 @@
             // 
             // copyrightLabel
             // 
-            this.copyrightLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.copyrightLabel.BackColor = System.Drawing.Color.Black;
             this.copyrightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyrightLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.copyrightLabel.Location = new System.Drawing.Point(156, 266);
+            this.copyrightLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.copyrightLabel.Location = new System.Drawing.Point(144, 265);
             this.copyrightLabel.Name = "copyrightLabel";
             this.copyrightLabel.Size = new System.Drawing.Size(134, 15);
             this.copyrightLabel.TabIndex = 2;
@@ -95,8 +96,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(290, 312);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.spaceBarTxt);
